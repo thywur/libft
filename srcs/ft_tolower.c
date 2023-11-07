@@ -6,11 +6,11 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:49 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/07 17:25:53 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:47:57 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
