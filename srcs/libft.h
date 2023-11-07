@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:38:16 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/07 18:46:52 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:54:56 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 
+int		ft_atoi(const char *nptr);
 void	*ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
