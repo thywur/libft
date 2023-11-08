@@ -6,13 +6,13 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:56:41 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 12:23:07 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:29:36 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_in_charset(char *set, char c)
+static int	is_in_charset(char *set, char c)
 {
 	int	i;
 
