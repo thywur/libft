@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:40:15 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 15:40:49 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:30:47 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_putendl_fd(char *s, int fd)
 	i = 0;
 	while (s[i])
 		write(fd, &s[i++], 1);
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

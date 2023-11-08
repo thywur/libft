@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:26:50 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 15:31:03 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:32:49 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		(*f)(i, s[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

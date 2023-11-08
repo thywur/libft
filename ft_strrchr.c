@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:37:25 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/07 17:39:16 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:33:21 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i > 0)
 	{
 		if (s[i] == c)
-			return (&s[i]);
+			return ((char *)&s[i]);
 		i--;
 	}
 	return (NULL);

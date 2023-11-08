@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:11:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 15:07:54 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:27:02 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ char	*ft_itoa(int n)
 	{
 		i--;
 		str[i] = (nb % 10) + '0';
-		printf("%c\n", str[i]);
 		nb /= 10;
 	}
 	return (str);
