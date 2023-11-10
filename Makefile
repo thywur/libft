@@ -6,7 +6,7 @@
 #    By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 16:11:24 by alermolo          #+#    #+#              #
-#    Updated: 2023/11/08 16:34:47 by alermolo         ###   ########.fr        #
+#    Updated: 2023/11/10 17:15:18 by alermolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,19 @@ SRCS = 		ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 
+BSRCS =		ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
+			ft_lstlast.c \
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c \
+
 OBJS =		$(SRCS:.c=.o)
+
+BOBJS =		$(BSRCS:.c=.o)
 
 CC =		cc
 
@@ -59,12 +71,15 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
+bonus:		$(OBJS) $(BOBJS)
+				ar rcs $(NAME) $(OBJS) $(BOBJS)
+
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(BOBJS)
 
 fclean:		clean
 				$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
