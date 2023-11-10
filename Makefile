@@ -6,7 +6,7 @@
 #    By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 16:11:24 by alermolo          #+#    #+#              #
-#    Updated: 2023/11/10 17:15:18 by alermolo         ###   ########.fr        #
+#    Updated: 2023/11/10 17:16:33 by alermolo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ CC =		cc
 
 CFLAGS =	-Wall -Werror -Wextra
 
-RM =		rm -f
+RM =		rm -rf
 
 all:		$(NAME)
 
