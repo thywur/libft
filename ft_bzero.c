@@ -6,11 +6,11 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:43:37 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/06 16:59:01 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:01:16 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_bzero(void *s, size_t n)
 {

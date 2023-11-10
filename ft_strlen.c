@@ -6,11 +6,11 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:52:02 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/06 16:04:40 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:02:55 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

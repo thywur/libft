@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:18:32 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/07 19:31:17 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/10 14:41:55 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*new;
 	unsigned long	i;
 
+	if (start > ft_strlen(s))
+	{
+		len = 0;
+		start = ft_strlen(s);
+	}
+	else if (start + len > ft_strlen(s) || len > ft_strlen(s))
+		len = ft_strlen(s) - start;
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
