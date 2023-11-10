@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:24:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 14:08:37 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:44:48 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	get_split_size(char const *s, char c)
 		if (s[i + 1] != c && s[i + 1] != '\0' && s[i] == c)
 		{
 			size++;
-			while (s[i] && s[i] == c)
+			while (s[i + 1] && s[i] == c)
 				i++;
 		}
 		i++;
@@ -68,16 +68,16 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i] == c)
-		i++;
 	while (s[i] && j < size)
 	{
+		while (s[i] == c)
+			i++;
 		save = i;
 		while (s[i] && s[i] != c)
 			i++;
 		split[j++] = ft_strndup(&s[save], i - save);
 		i++;
 	}
-	split[j] = NULL;
+	split[j] = 0;
 	return (split);
 }

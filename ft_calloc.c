@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:08:08 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/10 14:11:01 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:58:32 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	arr = (void *)malloc(nmemb * size);
 	if (!arr)
-	 	return (NULL);
+		return (NULL);
 	ft_bzero(arr, nmemb * size);
 	return (arr);
 }

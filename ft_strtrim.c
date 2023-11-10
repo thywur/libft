@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:56:41 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 13:29:36 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:19:13 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	size = ft_strlen(s1);
-	while (is_in_charset((char *)set, s1[i]))
+	while (is_in_charset((char *)set, s1[i]) && s1[i])
 		i++;
-	while (is_in_charset((char *)set, s1[size]))
+	while (is_in_charset((char *)set, s1[size - 1]) && size - 1 > 0)
 		size--;
-	size = size - i - 1;
+	if (size - i > 0)
+		size = size - i;
+	else
+		size = 0;
 	trim = (char *)malloc(sizeof(char) * (size + 1));
 	if (!trim)
 		return (NULL);
