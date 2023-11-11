@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:24:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 15:18:58 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:31:47 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static int	ft_get_split_size(char const *str, char sep)
 	size = 0;
 	while (str[i])
 	{
-		if (str[i] != sep && str[i + 1] == sep || str[i + 1] == '\0')
+		if (str[i] != sep && (str[i + 1] == sep || str[i + 1] == '\0'))
 			size++;
 		i++;
 	}
@@ -98,7 +98,7 @@ static int	ft_get_split_size(char const *str, char sep)
 // 	return (split);
 // }
 
-static void	ft_fill_split(char **split, char *str, char sep, int split_size)
+static void	ft_fill_split(char **split, const char *str, char sep, int split_size)
 {
 	int	save;
 	int	i;
