@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:31:43 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 18:20:05 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:26:50 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,27 @@
 // 	lst = NULL;
 // }
 
+// void	ft_lstclear(t_list **lst, void (*del)(void *))
+// {
+// 	if (!lst || !del)
+// 		return ;
+// 	ft_lstclear(&(*lst)->next, del);
+// 	ft_lstdelone(*lst, del);
+// 	*lst = NULL;
+// }
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!lst || !del)
+	t_list	*temp;
+
+	if (!del)
 		return ;
-	ft_lstclear(&(*lst)->next, del);
-	ft_lstdelone(*lst, del);
+	while (*lst)
+	{
+		(*del)((*lst)->content);
+		temp = *lst;
+		*lst = ((*lst)->next);
+		free(temp);
+	}
 	*lst = NULL;
 }
