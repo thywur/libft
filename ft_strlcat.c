@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:55:06 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 15:25:43 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:33:46 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@
 // 	return (src_size);
 // }
 
-static char	*ft_strncat(char *dest, char *src, size_t nb)
+static char	*ft_strncat(char *dest, const char *src, size_t nb)
 {
 	unsigned long	i;
 	unsigned long	j;

@@ -6,13 +6,13 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:24:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 15:31:47 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:33:02 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strndup(char *src, int n)
+static char	*ft_strndup(const char *src, int n)
 {
 	int		i;
 	char	*dup;
