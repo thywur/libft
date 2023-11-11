@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:46:50 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/10 13:01:55 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:53:54 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned long	i;
 
 	i = 0;
-	if (dest == NULL && src == NULL && n > 0)
+	if ((dest == NULL || src == NULL) && n > 0)
 		return (NULL);
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:44:41 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/07 16:56:51 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:02:16 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	unsigned long	src_size;
 	unsigned long	i;
 
+	if (!dst || !src)
+		return (NULL);
 	src_size = 0;
 	i = 0;
 	while (src[src_size])

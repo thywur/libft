@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:37:48 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/08 15:39:13 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:59:29 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 		write(fd, &s[i++], 1);

@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:24:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 17:37:51 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:43:12 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	int		split_size;
 
+	if (!s)
+		return (NULL);
 	split_size = ft_get_split_size(s, c);
 	split = malloc(sizeof(char *) * (split_size + 1));
 	if (!split)

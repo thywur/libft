@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:31:16 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/07 18:46:30 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 19:03:53 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	unsigned long	i;
 	unsigned long	j;
 
+	if (!big || !little)
+		return (NULL);
 	i = 0;
 	if (little[i] == '\0')
 		return ((char *)big);
