@@ -6,29 +6,29 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:24:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 17:20:25 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:37:51 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_get_split_size(char const *str, char sep)
+static int	ft_get_split_size(char const *s, char c)
 {
 	int	i;
 	int	size;
 
 	i = 0;
 	size = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] != sep && (str[i + 1] == sep || str[i + 1] == '\0'))
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			size++;
 		i++;
 	}
 	return (size);
 }
 
-static void	ft_fill_split(char **split, const char *str, char sep, int split_size)
+static void	ft_fill_split(char **split, const char *s, char c, int size)
 {
 	int	save;
 	int	i;
@@ -36,22 +36,22 @@ static void	ft_fill_split(char **split, const char *str, char sep, int split_siz
 
 	i = 0;
 	line_no = 0;
-	while (str[i] && str[i] == sep)
+	while (s[i] && s[i] == c)
 		i++;
 	save = i;
-	while (str[i] && line_no < split_size)
+	while (s[i] && line_no < size)
 	{
-		if (i != 0 && str[i - 1] != sep && str[i] == sep)
+		if (i != 0 && s[i - 1] != c && s[i] == c)
 		{
-			split[line_no] = ft_substr(str, save, i - save);
+			split[line_no] = ft_substr(s, save, i - save);
 			line_no++;
 		}
-		if (i != 0 && str[i - 1] == sep && str[i] != sep)
+		if (i != 0 && s[i - 1] == c && s[i] != c)
 			save = i;
 		i++;
 	}
-	if (i != 0 && str[i] == '\0' && str[i - 1] != sep)
-		split[line_no] = ft_substr(str, save, i);
+	if (i != 0 && s[i] == '\0' && s[i - 1] != c)
+		split[line_no] = ft_substr(s, save, i);
 }
 
 char	**ft_split(char const *s, char c)
