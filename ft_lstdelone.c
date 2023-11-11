@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:17:24 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 17:44:41 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:52:18 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	if (lst)
 	{
 		(*del)(lst->content);
-		free(lst->content);
+		free(lst);
 	}
 }
