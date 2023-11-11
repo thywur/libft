@@ -6,53 +6,11 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:24:01 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 17:16:09 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:20:25 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// static char	*ft_strndup(const char *src, int n)
-// {
-// 	int		i;
-// 	char	*dup;
-
-// 	i = 0;
-// 	dup = malloc(sizeof(char) * (n + 1));
-// 	if (!dup)
-// 		return (NULL);
-// 	while (src[i] && i < n)
-// 	{
-// 		dup[i] = src[i];
-// 		i++;
-// 	}
-// 	dup[i] = '\0';
-// 	return (dup);
-// }
-
-// static int	get_split_size(char const *s, char c)
-// {
-// 	int	i;
-// 	int	size;
-
-// 	i = 0;
-// 	size = 0;
-// 	while (s[i] == c)
-// 		i++;
-// 	if (s[i] != c && s[i] != '\0')
-// 		size++;
-// 	while (s[i])
-// 	{
-// 		if (s[i + 1] != c && s[i + 1] != '\0' && s[i] == c)
-// 		{
-// 			size++;
-// 			while (s[i + 1] && s[i] == c)
-// 				i++;
-// 		}
-// 		i++;
-// 	}
-// 	return (size);
-// }
 
 static int	ft_get_split_size(char const *str, char sep)
 {
@@ -69,34 +27,6 @@ static int	ft_get_split_size(char const *str, char sep)
 	}
 	return (size);
 }
-
-// char	**ft_split(char const *s, char c)
-// {
-// 	int		i;
-// 	int		j;
-// 	int		save;
-// 	int		size;
-// 	char	**split;
-
-// 	size = get_split_size(s, c);
-// 	split = (char **)malloc(sizeof(char *) * (size + 1));
-// 	if (!split)
-// 		return (NULL);
-// 	i = 0;
-// 	j = 0;
-// 	while (s[i] && j < size)
-// 	{
-// 		while (s[i] == c)
-// 			i++;
-// 		save = i;
-// 		while (s[i] && s[i] != c)
-// 			i++;
-// 		split[j++] = ft_strndup(&s[save], i - save);
-// 		i++;
-// 	}
-// 	split[j] = 0;
-// 	return (split);
-// }
 
 static void	ft_fill_split(char **split, const char *str, char sep, int split_size)
 {
@@ -134,30 +64,6 @@ char	**ft_split(char const *s, char c)
 	if (!split)
 		return (NULL);
 	ft_fill_split(split, s, c, split_size);
-	// split[split_size] = malloc(sizeof(char));
-	// if (!split[split_size])
-	// 	return (NULL);
 	split[split_size] = 0;
 	return (split);
 }
-
-// #include <stdio.h>
-// int	main(int argc, char **argv)
-// {
-// 	char	**tab;
-// 	int		i;
-
-// 	i = 0;
-// 	(void)argc;
-// 	tab = ft_split(argv[1], argv[2][0]);
-// 	while (tab[i])
-// 	{
-// 		printf("%s\n", tab[i]);
-// 		free(tab[i]);
-// 		i++;
-// 	}
-// 	printf("%s\n", tab[i]);
-// 	// free(tab[i]);
-// 	free(tab);
-// 	return (0);
-// }
