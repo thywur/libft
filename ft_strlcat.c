@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:55:06 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 19:01:48 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:18:35 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	unsigned long	src_size;
 
 	if (!dst || !src)
-		return (NULL);
+		return (0);
 	dest_size = ft_strlen(dst);
 	src_size = ft_strlen(src);
 	if (size <= dest_size)

@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:56:27 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 18:58:07 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:04:09 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned long	i;
 
 	if ((!dest || !src) && n > 0)
-		return ;
+		return (NULL);
 	if (src < dest)
 	{
 		i = n;

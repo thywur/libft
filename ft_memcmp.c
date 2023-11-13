@@ -6,7 +6,7 @@
 /*   By: alermolo <alermolo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:05:00 by alermolo          #+#    #+#             */
-/*   Updated: 2023/11/11 18:57:50 by alermolo         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:02:33 by alermolo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*str2;
 	unsigned long	i;
 
-	if ((!s1 || !s2) && n > 0)
-		return (NULL);
+	if (n == 0 || (!s1 && !s2))
+		return (0);
+	if (!s1 && s2 && n > 0)
+		return (-1);
+	if (s1 && !s2 && n > 0)
+		return (1);
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
